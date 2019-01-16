@@ -1,0 +1,27 @@
+en:
+  welcome: "Welcome to Codebreaker"
+  rules: "Codebreaker is a logic game in which a code-breaker tries to break
+        a secret code created by a code-maker.The codemaker, which
+        will be played by the application we’re going to write,
+        creates a secret code of four numbers between 1 and 6."
+  saved: "Saved successfully"
+  bye: "Goodbye"
+  menu_options: "Choose an action: %{options}"
+  enter_your_guess: "Please enter your guess of secret code below"
+  not_allowed: "Inserted value is not allowed"
+  table_header: "used_hints | attempts_used | attempts_total | hints_total | name"
+  give_us_your_name: "Ready to play? Give us a name."
+  invalid_name: "Not valid name!
+                 Must be a String with length between %{min} to %{max} symbols
+                 Please give us a valid name"
+  ask_for_save: "Would you like save result of game?(Y/N)"
+  no_more_hints: "No more available hints for this difficult"
+  want_restart: "To start new game enter - restart or exit"
+  choose_difficult: "Choose difficult from %{options}"
+  complexity: "You chose complexity - %{heavy}."
+  show_hint: "Your hint is -> %{d}"
+  invalid_option: "Not valid answer.
+                   Please choose from %{options}"
+  game_result: "You %{stage}! Secret code is -> %{code}"
+  output: "Answer -> '%{result}' \n Tips left -> '%{tips_left}'"
+  unexpected_command: "You have passed unexpected command. Please choose one from listed commands"
