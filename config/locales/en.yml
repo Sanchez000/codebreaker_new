@@ -15,13 +15,13 @@ en:
                  Must be a String with length between %{min} to %{max} symbols
                  Please give us a valid name"
   ask_for_save: "Would you like save result of game?(Y/N)"
-  no_more_hints: "No more available hints for this difficult"
-  want_restart: "To start new game enter - restart or exit"
+  no_hints: "No more available hints for this difficult"
+  want_restart: "Would you like to start new game?(Y/N)"
   choose_difficult: "Choose difficult from %{options}"
   complexity: "You chose complexity - %{heavy}."
-  show_hint: "Your hint is -> %{d}"
+  hint: "Your hint is -> %{digit}"
   invalid_option: "Not valid answer.
                    Please choose from %{options}"
   game_result: "You %{stage}! Secret code is -> %{code}"
-  output: "Answer -> '%{result}' \n Tips left -> '%{tips_left}'"
+  round_result: "Answer -> '%{result}'"
   unexpected_command: "You have passed unexpected command. Please choose one from listed commands"
