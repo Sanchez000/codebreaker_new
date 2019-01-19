@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
 require 'i18n'
-# require_relative 'modules/validate'
-# require_relative 'modules/loader'
-# require_relative 'entitys/user'
-# require_relative 'entitys/game'
-# require 'yaml'
+require 'yaml'
+require_relative 'validator'
 require_relative 'console'
 require_relative 'user'
 require_relative 'game'
