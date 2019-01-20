@@ -1,4 +1,3 @@
-require 'pry'
 class Console
   attr_accessor :game, :user
 
