@@ -1,9 +1,6 @@
 Metrics/LineLength:
   Max: 120
 
-Style/ClassVars:
-  Enabled: false
-
 Style/RedundantSelf:
   Enabled: false
 

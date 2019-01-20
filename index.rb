@@ -2,6 +2,7 @@
 
 require 'i18n'
 require 'yaml'
+require_relative 'loader'
 require_relative 'validator'
 require_relative 'console'
 require_relative 'user'

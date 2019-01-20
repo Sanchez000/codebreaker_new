@@ -1,5 +1,5 @@
 class Game
-  attr_reader :user, :level, :hints_total, :attempts_total, :hints_left, :attempts_left
+  attr_reader :user, :level, :hints_total, :attempts_total, :hints_left, :attempts_left, :secret_code
 
   PATH_TO_DB = 'stats.yml'.freeze
   LABEL_GUESSED_RIGHT = '+'.freeze
@@ -30,10 +30,7 @@ class Game
     @attempts_total = LEVELS_NAMES[level][:attempts]
     @hints_left = @hints_total
     @attempts_left = @attempts_total
-  end
-
-  def self.storage
-    @@list_of_games ||= File.exist?(PATH_TO_DB) ? YAML.load_file(PATH_TO_DB) : []
+    @secret_code = secret
   end
 
   def fetch_guess(guess)
@@ -43,23 +40,15 @@ class Game
   end
 
   def hint
-    @@shuffled ||= secret.shuffle
+    @shuffled ||= secret.shuffle
     @hints_left -= 1
-    @@shuffled.pop
-  end
-
-  def right_code
-    secret.join(', ')
-  end
-
-  def save
-    File.open(PATH_TO_DB, 'w') { |file| file.write self.to_yaml }
+    @shuffled.pop
   end
 
   private
 
   def secret
-    @@secret ||= Array.new(CODE_SIZE) { rand(CODE_RANGE) }
+    @secret ||= Array.new(CODE_SIZE) { rand(CODE_RANGE) }
   end
 
   def pluses(input)

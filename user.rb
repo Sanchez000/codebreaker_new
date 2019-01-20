@@ -10,14 +10,6 @@ class User
   end
 
   def valid?
-    name_proc_validator.call(@name)
-  end
-
-  private
-
-  def name_proc_validator
-    proc do |name|
-      range_checker([name.size], NAME_LENGTH)
-    end
+    range_checker([name.size], NAME_LENGTH)
   end
 end

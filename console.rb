@@ -1,7 +1,9 @@
+require 'pry'
 class Console
   attr_accessor :game, :user
 
   include Validator
+  include Loader
 
   COMMANDS = {
     start: 'start',
@@ -33,7 +35,7 @@ class Console
     case input
     when COMMANDS[:start] then start
     when COMMANDS[:rules] then show_message(:rules)
-    when COMMANDS[:stats] then stats
+    when COMMANDS[:stats] then puts stats
     when COMMANDS[:exit] then quit
     else show_message(:unexpected_command)
     end
@@ -103,22 +105,21 @@ class Console
   end
 
   def stats
-    archive = Game.storage
-    puts archive.to_s
+    original = storage.sort_by { |row| row[:level] }.reverse
+    original.sort_by { |row| row[:attempts_left] && row[:hints_left] }
   end
 
   def want_to?(command)
     command == GAMEPLAY_COMMANDS[:restart] ? show_message(:want_restart) : show_message(:ask_for_save)
-    answer = gets.chomp
-    answer == GAMEPLAY_COMMANDS[:yes]
+    gets.chomp == GAMEPLAY_COMMANDS[:yes]
   end
 
   private
 
   def game_result(status)
-    show_message(:game_result, stage: status, code: game.right_code)
+    show_message(:game_result, stage: status, code: game.secret_code)
     if status == Game::STATUSES[:win]
-      game.save if want_to?(GAMEPLAY_COMMANDS[:save])
+      save(game) if want_to?(GAMEPLAY_COMMANDS[:save])
     end
     start if want_to?(GAMEPLAY_COMMANDS[:restart])
     exit
