@@ -22,8 +22,14 @@ SimpleCov.start do
 end
 
 require 'i18n'
+require 'pry'
+require './lib/app/modules/validator'
+require './lib/app/modules/loader'
+require './lib/app/entitys/console'
+require './lib/app/entitys/user'
+require './lib/app/entitys/game'
 
-I18n.load_path << Dir[File.expand_path('config/locales') + '/*.yml']
+I18n.load_path << Dir[File.expand_path('lib/app/config/locales') + '/*.yml']
 I18n.default_locale = :en
 
 RSpec.configure do |config|

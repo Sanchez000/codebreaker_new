@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-require 'loader'
-require 'game'
-
 class DummyClass
   include Loader
 end

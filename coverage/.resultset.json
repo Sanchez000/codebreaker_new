@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/ec2-user/environment/codebreaker_new/lib/validator.rb": [
+      "/home/ec2-user/environment/codebreaker_new/lib/app/modules/validator.rb": [
         1,
         1,
         5,
@@ -21,7 +21,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/codebreaker_new/lib/loader.rb": [
+      "/home/ec2-user/environment/codebreaker_new/lib/app/modules/loader.rb": [
         1,
         1,
         1,
@@ -40,7 +40,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/codebreaker_new/lib/console.rb": [
+      "/home/ec2-user/environment/codebreaker_new/lib/app/entitys/console.rb": [
         1,
         1,
         null,
@@ -168,7 +168,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/codebreaker_new/lib/user.rb": [
+      "/home/ec2-user/environment/codebreaker_new/lib/app/entitys/user.rb": [
         1,
         1,
         null,
@@ -185,7 +185,7 @@
         null,
         null
       ],
-      "/home/ec2-user/environment/codebreaker_new/lib/game.rb": [
+      "/home/ec2-user/environment/codebreaker_new/lib/app/entitys/game.rb": [
         1,
         1,
         null,
@@ -262,6 +262,6 @@
         null
       ]
     },
-    "timestamp": 1548080114
+    "timestamp": 1548081356
   }
 }

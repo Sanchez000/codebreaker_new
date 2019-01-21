@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
-require 'validator'
-require 'loader'
-require 'console'
-require 'user'
-require 'game'
-
 RSpec.describe Game do
   describe '#initialize' do
     context 'will get user' do

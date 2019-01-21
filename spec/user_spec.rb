@@ -1,16 +1,5 @@
 # frozen_string_literal: true
 
-require 'i18n'
-require 'pry'
-require 'validator'
-require 'loader'
-require 'console'
-require 'user'
-require 'game'
-
-I18n.load_path << Dir[File.expand_path('lib/config/locales') + '/*.yml']
-I18n.default_locale = :en
-
 RSpec.describe User do
   describe '#valid?' do
     context 'validate length name' do

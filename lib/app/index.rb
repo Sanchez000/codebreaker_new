@@ -2,11 +2,11 @@
 
 require 'i18n'
 require 'yaml'
-require_relative 'loader'
-require_relative 'validator'
-require_relative 'console'
-require_relative 'user'
-require_relative 'game'
+require_relative 'modules/loader'
+require_relative 'modules/validator'
+require_relative 'entitys/console'
+require_relative 'entitys/user'
+require_relative 'entitys/game'
 
 I18n.load_path << Dir[File.expand_path('config/locales') + '/*.yml']
 I18n.default_locale = :en

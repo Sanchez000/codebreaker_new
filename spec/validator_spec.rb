@@ -1,12 +1,5 @@
 # frozen_string_literal: true
 
-require 'pry'
-require 'validator'
-require 'loader'
-require 'console'
-require 'user'
-require 'game'
-
 class DummyClass
   include Validator
 end
